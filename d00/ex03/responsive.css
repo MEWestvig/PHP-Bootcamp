@@ -1,0 +1,59 @@
+div {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 2vw;
+}
+p {
+  margin: 3px;
+  font-size: 1vw;
+}
+p.mass {
+  text-align: right;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin: 10px;
+}
+table {
+  width: 100%;
+}
+td {
+  min-width: 5.55555%;
+}
+td.non-metal {
+  background-color: powderblue;
+}
+td.alkali-metal {
+  background-color: orange;
+}
+td.alkaline-earth-metal {
+  background-color: red;
+}
+td.transition-metal {
+  background-color: yellow;
+}
+td.metal {
+  background-color: green;
+}
+td.metalloid {
+  background-color: limegreen;
+}
+td.halogen {
+  background-color: turquoise;
+}
+td.noble-gas {
+  background-color: blue;
+}
+td.lanthanide {
+  background-color: mediumpurple;
+}
+td.actinide {
+  background-color: pink;
+}
+td.unknown {
+  background-color: grey;
+}

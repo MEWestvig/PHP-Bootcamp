@@ -5,6 +5,59 @@
     <link rel="stylesheet" href="doft.css"/>
   </head>
   <body>
-    
+    <header>
+      <div class="left">
+        <img id="logo" src="resources/day_of_the_42.png" alt="logo" title="logo"/>
+      </div>
+      <div class="right">
+        <div class="left">
+          <div id="loupe">
+            <img src="resources/loupe.png" alt="loupe"/>
+          </div>
+        </div>
+        <div class="right">
+          <div id="reload">
+            <a href="http://www.disney.com">
+              <img src="resources/reload.png" alt="Start from the beginning" title="Start from the beginning"/>
+            </a>
+          </div>
+          <div id="close">
+            <a href="http://www.relaischateaux.com">
+              <img src="resources/close.gif" alt="Disconnect" title="Disconnect"/>
+            </a>
+          </div>
+        </div>
+        <div class="clear"/>
+      </div>
+      <div class="clear"/>
+    </header>
+    <div id="container">
+      <div class="menu left">
+        <img class="icons" src="resources/arrow.png" alt="Advance" title="Advance"/>
+        <img class="icons" src="resources/main.png" alt="Take" title="Take"/>
+        <img class="icons_active" src="resources/oeil.png" alt="Look" title="Look"/>
+        <img class="icons" src="resources/outil.png" alt="Use" title="Use"/>
+        <img class="icons" src="resources/chat-icon.png" alt="Speak" title="Speak"/>
+      </div>
+      <div class="menu right">
+        <img class="icons" src="resources/book.png" alt="Book"/>
+        <img class="icons" src="resources/towel.png" alt="Towel"/>
+        <div id="brick"></div>
+      </div>
+      <div id="body">
+        <div id="background">
+          <a href="http://www.ikea.com" alt="Chair" title="Chair"><div id="chair"></div></a>
+          <a href="http://www.apple.com" alt="Mac" title="Mac"><div id="mac"></div></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div id="green_block">
+        Vous <span id="enter">entrez</span> alors dans une grande piece remplie<br/>
+        d'<span id="shadow">ordinateurs</span>...<br/>
+        <span id="italic">- Bonjour, vous &ecirc;tes nouveau ici ?</span><br/>
+        <input id="text" type="text" name="text"/>
+        <input id="button" type="button" name="OK" value="Repondre"/>
+      </div>
+    </div>
   </body>
 </html>

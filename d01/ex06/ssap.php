@@ -1,17 +1,18 @@
 <?php
-$arr1 = explode(" ", $argv[1]);
-for ($i=2; $i < $argc; $i++) {
-  $arr = array_merge($arr1, explode(" ", $argv[i]));
-}
-sort($arr);
-$ret = array();
-foreach($arr as $key)
+function epur($str1)
 {
-  if (!empty($key))
-    $ret[] = $key;
+  $str = trim($str1);
+  $out = preg_replace('/ +/', ' ', $str);
+  return ($out);
 }
-unset($arr);
-for ($j=0; $j < count($ret) ; $j++) {
-  print($ret[i] . "\n");
+$final = array();
+foreach (array_slice($argv, 1) as $arg) {
+  $pur = explode(" ", epur($arg));
+  $final = array_merge($final, $pur);
+}
+sort($final);
+foreach($final as $word)
+{
+  echo $word . "\n";
 }
 ?>

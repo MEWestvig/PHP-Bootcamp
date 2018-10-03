@@ -1,1 +1,4 @@
-<?php echo "Hello World!\n" ?>
+#!/usr/bin/php
+<?php 
+echo "Hello World!\n" 
+?>

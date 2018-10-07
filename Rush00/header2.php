@@ -17,6 +17,7 @@ echo '
       <li><a class="left" href="contact.php">Contact</a></li>';
        if ($_SESSION['curr_user']){
          echo '<li><a class="right" href="logout.php">Logout</a></li>';
+         echo '<li><a class="right" href="modify.php">Change pass</a></li>';
         }else {
           echo '<li><a class="right" href="create.php">Register</a></li>
                 <li><a class="right" href="login.php">Login</a></li>';

@@ -8,16 +8,16 @@ Class Color {
   function __construct($color) {
     if (isset($color['red']) && isset($color['green']) && isset($color['blue']))
     {
-      $this->$red = intval($color['red']);
-      $this->$green = intval($color['green']);
-      $this->$blue = intval($color['blue']);
+      $this->red = intval($color['red']);
+      $this->green = intval($color['green']);
+      $this->blue = intval($color['blue']);
     }
     else if (isset($color['rgb']))
     {
       $rgb = intval($color['rgb']);
-      $red = $rgb >> 16 & 255;
-      $green = $rgb >> 8 & 255;
-      $blue = $rgb & 255;
+      $this->red = ($rgb >> 16) & 255;
+      $this->green = ($rgb >> 8) & 255;
+      $this->blue = $rgb & 255;
     }
     if (Self::$verbose)
       printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n", $this->red, $this->green, $this->blue);

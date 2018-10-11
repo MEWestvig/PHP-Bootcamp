@@ -1,13 +1,17 @@
 .grid {
-  width:100%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 .gridtd {
-  min-width: calc(100% / 150);
   border: 1px solid #000000;
 }
 
 .gridtr {
-  min-height: calc(100vw / 150);
+  height: calc(100vw / 150);
+}
+
+.gridclick a {
+  display:block;
+    width:100%;
 }

@@ -22,5 +22,6 @@
   </form>
   <button id="button">Roll Dice</button>
   <script src="dice.js"></script>
+  <script src="ui.js"></script>
 </body>
 </html>

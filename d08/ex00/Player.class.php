@@ -6,6 +6,7 @@ class Player
 	protected $x = 0;
 	protected $y = 0;
 	protected $movement = 3;
+	protected $health = 5;
 	function __construct($n, $num, $board_x, $board_y)
 	{
 		$this->name = $n;
@@ -18,6 +19,10 @@ class Player
 			$this->y = rand($board_y / 2 + $board_y / 2 / 4 * 3, $board_y - 1);
 		}
 	}
+	function reset()
+	{
+		$this->movement = 3;
+	}
 	function play()
 	{
 		$this->rollDice();
@@ -29,7 +34,7 @@ class Player
 	function updateX($i)
 	{
 		$dif = $i - $this->x;
-		$this->movement -= $dif;
+		$this->movement -= abs($dif);
 		$this->x += $dif;
 	}
 	function getX()
@@ -39,7 +44,7 @@ class Player
 	function updateY($i)
 	{
 		$dif = $i - $this->y;
-		$this->movement -= $dif;
+		$this->movement -= abs($dif);
 		$this->y += $dif;
 	}
 	function getY()

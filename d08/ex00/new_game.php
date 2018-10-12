@@ -9,6 +9,7 @@ session_destroy();
   <?php
   $names = array("Death of Worlds", "Deathdealer", "Scourge of Malice", "Thunder Child", "Warspite", "Sovereign of Space");
    ?>
+   <img src="resources/rocket.png" style="display: block; margin-left: auto; margin-right: auto; width: 10%;">
   <form style="margin: 0 auto; width:250px;" action="index.php" method="post">
     <fieldset>
       Player 1 info:<br \>

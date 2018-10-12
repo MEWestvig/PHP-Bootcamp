@@ -1,17 +1,17 @@
 .grid {
+  table-layout: fixed;
   width: 100%;
   height: 100%;
 }
 
 .gridtd {
+
   border: 1px solid #000000;
+  word-wrap:break-word;
 }
 
-.gridtr {
-  height: calc(100vw / 150);
-}
-
-.gridclick a {
-  display:block;
+.gridtd a {
+  display:inline-block;
     width:100%;
+    height:100%;
 }

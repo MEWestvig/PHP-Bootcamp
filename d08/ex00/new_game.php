@@ -1,3 +1,5 @@
+<?php
+?>
 <html>
 <body>
   <?php
@@ -18,5 +20,7 @@
       <input type="submit" value="Submit">
     </fieldset>
   </form>
+  <button id="button">Roll Dice</button>
+  <script src="dice.js"></script>
 </body>
 </html>

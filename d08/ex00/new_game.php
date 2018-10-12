@@ -1,11 +1,15 @@
 <?php
+session_start();
+$_SESSION['p1'] = '';
+$_SESSION['p2'] = '';
+session_destroy();
 ?>
 <html>
 <body>
   <?php
   $names = array("Death of Worlds", "Deathdealer", "Scourge of Malice", "Thunder Child", "Warspite", "Sovereign of Space");
    ?>
-  <form action="index.php" method="post">
+  <form style="margin: 0 auto; width:250px;" action="index.php" method="post">
     <fieldset>
       Player 1 info:<br \>
       Ship name:<br>
@@ -18,10 +22,8 @@
       echo '<input type="text" name="p2" value="'.$names[rand(0,5)].'"><br>';
       ?>
       <input type="submit" value="Submit">
+      <a href="docs.php">Documents</a>
     </fieldset>
   </form>
-  <button id="button">Roll Dice</button>
-  <script src="dice.js"></script>
-  <script src="ui.js"></script>
 </body>
 </html>

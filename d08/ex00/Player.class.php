@@ -5,8 +5,9 @@ class Player
 	protected $name = "";
 	protected $x = 0;
 	protected $y = 0;
-	protected $movement = 3;
+	protected $movement = 15;
 	protected $health = 5;
+	protected $roll = 0;
 	function __construct($n, $num, $board_x, $board_y)
 	{
 		$this->name = $n;
@@ -19,13 +20,11 @@ class Player
 			$this->y = rand($board_y / 2 + $board_y / 2 / 4 * 3, $board_y - 1);
 		}
 	}
-	function reset()
+	function reset($i)
 	{
-		$this->movement = 3;
-	}
-	function play()
-	{
-		$this->rollDice();
+		$this->movement = 15;
+		if ($i === 1)
+			$this->roll = 0;
 	}
 	function getName()
 	{
@@ -55,5 +54,24 @@ class Player
 	{
 		return $this->movement;
 	}
+	function getHealth()
+	{
+		return $this->health;
+	}
+	function setRoll($roll)
+	{
+		$this->roll = $roll;
+	}
+	function getRoll()
+	{
+		return $this->roll;
+	}
+	public static function doc() {
+   $read = fopen("Player.doc.txt", 'r');
+   echo "\n";
+   while ($read && !feof($read))
+     echo fgets($read);
+   echo "\n";
+  }
 }
 ?>

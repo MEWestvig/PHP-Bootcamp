@@ -1,0 +1,43 @@
+The player class contains all information related to each player.
+
+It contains:
+  The name
+  Current x and y values
+  Maximum number of movement points for each round
+  Maximum health for each player
+  Current dice roll which starts at 0
+
+When construct is called, it sets up the current player with a name, a player
+number and a starting x and y coordinate. This x and y coordinate is randomly
+selected from either the top left or bottom right quadrant.
+
+The following functions exist in the player class:
+  reset:
+    This just resets the number of moves for the current player to the maximum
+    number of moves they can have for the round as well as setting the dice roll
+    back to 0.
+  getName:
+    This just returns the name variable of the current player.
+  getX:
+    This just returns the x coordinate of the current player.
+  getY:
+    This just returns the y coordinate of the current player.
+  updateX:
+    This function takes in the new x value and updates the player's x coordinate
+    on the map as well as subtracting the number of moves it takes to get there
+    from the player's movement value.
+  updateY:
+    This function takes in the new y value and updates the player's y coordinate
+    on the map as well as subtracting the number of moves it takes to get there
+    from the player's movement value.
+  getMove:
+    This function just return the current number of moves left for the current
+    player.
+  getHealth:
+    Just returns the players current health.
+  setRoll:
+    sets the players current roll to the roll of the dice.
+  getRoll:
+    Just returns the current value rolled by the current player.
+  doc:
+    Prints out the documentation for the Player class.

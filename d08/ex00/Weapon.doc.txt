@@ -1,0 +1,19 @@
+The Weapon class contains all relevant information for the weapon used in the
+game. It extends the Player class in order to use the functions and information
+from it.
+
+It contains:
+  short, mid and long which are arrays of min and max numbers for each.
+  dist, which is the distance between players on either the x or y plane.
+
+The functions in this class are as follows:
+  construct:
+    Just allows this class to be constructed in order to be used.
+  dealDamage:
+    Subtracts one health from the player being attacked.
+  canAttack:
+    Checks whether the players are on the same x or y plane and if they are
+    then it checks that thew distance falls within one of the three distance
+    ranges, which are short, medium and long.
+  doc:
+    prints out the documentation for the Weapon class.

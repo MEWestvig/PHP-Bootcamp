@@ -12,14 +12,15 @@
   var right;
   var oper;
 
-  window.onload = function () {
-    calc = document.querySelector("#calc");
-    left = document.querySelector("#left");
-    right = document.querySelector("#right");
-    oper = document.querySelector("#oper");
-    calc.addEventListener("submit", submit);
-    setInterval("alert('Please, use me...')", 30000)
-  }
+  $(document).ready(function(){
+            calc = $('#calc');
+            left = $('#left');
+            right = $('#right');
+            oper = $('#oper');
+            calc.submit(submit);
+            setInterval("alert('Please, use me...')", 30000);
+  })
+
   function numIsValid(l, r) {
     if (isNaN(l) || isNaN(r))
       return (false);
@@ -29,13 +30,13 @@
   }
   function submit(event) {
     event.preventDefault();
-    var l = Number(left.value);
-    var r = Number(right.value);
-    if (!numIsValid(left.value, right.value)) {
+    var l = Number(left.val());
+    var r = Number(right.val());
+    if (!numIsValid(left.val(), right.val())) {
       alert("Error :(");
       return false;
     }
-    switch (oper.value) {
+    switch (oper.val()) {
       case ('add'):
         result(l + r);
         break;

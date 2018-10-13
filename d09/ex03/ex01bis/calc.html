@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Calc</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
   <style>
   </style>
   <script>
@@ -17,7 +18,7 @@
     right = document.querySelector("#right");
     oper = document.querySelector("#oper");
     calc.addEventListener("submit", submit);
-    setInterval("alert('Please, use me...')", 30000);
+    setInterval("alert('Please, use me...')", 30000)
   }
   function numIsValid(l, r) {
     if (isNaN(l) || isNaN(r))
@@ -34,7 +35,7 @@
       alert("Error :(");
       return false;
     }
-    switch (oper.val())) {
+    switch (oper.value) {
       case ('add'):
         result(l + r);
         break;

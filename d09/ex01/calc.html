@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <title>Calc</title>
   <style>
+  body {
+    background-color: GREY;
+  }
+  h1 {
+    text-align: center;
+  }
+  form {
+    text-align: center;
+  }
+  .calc {
+    width: 500px;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 75px 50px 50px 50px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
   </style>
   <script>
   var calc;
@@ -34,7 +51,7 @@
       alert("Error :(");
       return false;
     }
-    switch (oper.val())) {
+    switch (oper.value) {
       case ('add'):
         result(l + r);
         break;

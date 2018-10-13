@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calc</title>
+  <style>
+  </style>
+  <script>
+  var calc;
+  var left;
+  var right;
+  var oper;
+
+  window.onload = function () {
+    calc = document.querySelector("#calc");
+    left = document.querySelector("#left");
+    right = document.querySelector("#right");
+    oper = document.querySelector("#oper");
+    calc.addEventListener("submit", submit);
+    setInterval("alert('Please, use me...')", 30000)
+  }
+  function numIsValid(l, r) {
+    if (isNaN(l) || isNaN(r))
+      return (false);
+    if (parseInt(l, 10) >= 0 && parseInt(r, 10) >= 0)
+      return true;
+    return false;
+  }
+  function submit(event) {
+    event.preventDefault();
+    var l = Number(left.value);
+    var r = Number(right.value);
+    if (!numIsValid(left.value, right.value)) {
+      alert("Error :(");
+      return false;
+    }
+    switch (oper.value) {
+      case ('add'):
+        result(l + r);
+        break;
+      case ('mul'):
+        result(l * r);
+        break;
+      case ('div'):
+        if (r === 0) {
+          result("It’s over 9000!");
+        } else {
+          result(l / r);
+        }
+        break;
+      case ('mod'):
+        if (r === 0) {
+          result("It’s over 9000!");
+        } else {
+          result(l % r);
+        }
+        break;
+      case ('sub'):
+        result(l - r);
+        break;
+      default:
+        result("ERROR: Operation Not Found!");
+        break;
+    }
+  }
+  function result(res) {
+    console.log(res);
+    alert(res);
+  }
+
+  </script>
+</head>
+<body>
+  <div class="calc">
+    <h1>Calculator</h1>
+    <form action="" id="calc">
+      <input type="text" id="left">
+      <select id="oper">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="mod">%</option>
+      </select>
+      <input type="text" id="right">
+      <input type="submit" id="submit" value="Try me!">
+    </form>
+  </div>
+</body>
+</html>
